@@ -1,8 +1,19 @@
 package events;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+
+@XmlAccessorType(XmlAccessType.FIELD)
 public class SpecialEvent extends GeneralEvent {
+
+    @XmlElement(name = "specialEventAbout")
     private String specialEventAbout;
+
+    @XmlElement(name = "specialEventStatus")
     private SpecialEventStatus specialEventStatus;
+
+    @XmlElement(name = "specialEventCreator")
     private Creator specialEventCreator;
 
     public String getSpecialEventAbout() {
